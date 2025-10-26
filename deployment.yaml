@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mernsample-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mernsample
+  template:
+    metadata:
+      labels:
+        app: mernsample
+    spec:
+      containers:
+      - name: mernsample
+        image: mernsample:1.0
+        ports:
+        - containerPort: 80

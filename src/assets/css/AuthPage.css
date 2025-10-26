@@ -1,0 +1,90 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+  
+  .auth-box {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 350px;
+  }
+  
+  .auth-box input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .auth-button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .auth-links {
+    margin-top: 10px;
+  }
+  
+  .auth-links a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+/* Import a Stylish Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap");
+
+body {
+
+        font-family: "Algerian", serif;
+      
+}
+
+.auth-box h2 {
+    font-family: "Algerian", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Adds a modern touch */
+}
+.auth-title {
+  font-family: "Algerian", serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.auth-title .lowercase {
+  text-transform: lowercase;
+}
+
+.auth-box p, 
+.auth-links a {
+    font-family: "Algerian", serif;
+  font-weight: 300;
+}
+
+.auth-button {
+    font-family: "Algerian", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+  

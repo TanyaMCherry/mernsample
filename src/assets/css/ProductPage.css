@@ -1,0 +1,43 @@
+.twinkle-heading {
+    animation: twinkle 1s infinite alternate;
+    color: #0d6efd;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .featured-img {
+    height: 250px;
+    object-fit: contain;
+    padding: 1rem;
+  }
+  
+  @keyframes twinkle {
+    from {
+      opacity: 0.5;
+      text-shadow: 0 0 5px #fff;
+    }
+    to {
+      opacity: 1;
+      text-shadow: 0 0 20px #0d6efd, 0 0 30px #0d6efd;
+    }
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+  
+  .twinkling-heading {
+    animation: twinkle 1.2s infinite ease-in-out;
+    color: #1d1dff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  

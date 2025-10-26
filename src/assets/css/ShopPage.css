@@ -1,0 +1,12 @@
+.blink-heading {
+    animation: blink 1.5s infinite;
+    color: #97284b; /* optional: eye-catching pink shade */
+    text-shadow: 0 0 8px #c1b0b6;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+  

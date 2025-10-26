@@ -1,0 +1,120 @@
+.contact-container {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px;
+    background: linear-gradient(to right, #f4f0ff, #e8e7f9);
+    min-height: 100vh;
+  }
+  
+  .contact-title {
+    text-align: center;
+    font-size: 36px;
+    color: #5a2ca0;
+    margin-bottom: 40px;
+  }
+  
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-grid {
+      flex-direction: row;
+    }
+  }
+  
+  .card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .card-title {
+    font-size: 22px;
+    color: #5a2ca0;
+    margin-bottom: 20px;
+  }
+  
+  .form input,
+  .form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+  
+  .emoji-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .emoji {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  
+  .emoji:hover,
+  .emoji.selected {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
+  .submit-btn {
+    background-color: #5a2ca0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45207b;
+  }
+  
+  /* Accordion */
+  .accordion-item {
+    margin-bottom: 10px;
+  }
+  
+  .accordion-button {
+    width: 100%;
+    text-align: left;
+    background-color: #f4f2fd;
+    color: #4b2d80;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .accordion-button:hover {
+    background-color: #e3dcfa;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    transition: max-height 0.3s ease;
+  }
+  
+  .accordion-content.active {
+    max-height: 100px;
+    padding-top: 8px;
+  }
+  
