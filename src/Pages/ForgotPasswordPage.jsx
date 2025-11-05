@@ -84,17 +84,15 @@ const ForgotPasswordPage = () => {
           <button type="submit" className="auth-button">Reset Password</button>
         </form>
 
-        <p className="auth-links">
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      navigate("/");
-    }}
-  >
-    Back to Sign In
-  </a>
-</p>
+        <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    navigate("/");
+  }}
+>
+  Back to Sign In
+</a>
 
 
       </div>
