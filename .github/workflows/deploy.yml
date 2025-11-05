@@ -1,16 +1,16 @@
-name: CI/CD for React + Vercel
+name: React CI (Build & Test)
 
 on:
   push:
     branches:
-      - main   # change to 'master' if that's your branch name
+      - main   # or 'master' if that’s your branch
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -26,6 +26,3 @@ jobs:
 
       - name: Build project
         run: npm run build
-
-      - name: Deploy to Vercel
-        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
