@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders Sign In button on AuthPage", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // Get the specific button element instead of any 'Sign In' text
+  const buttonElement = screen.getByRole("button", { name: /sign in/i });
+  expect(buttonElement).toBeInTheDocument();
 });
