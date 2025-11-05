@@ -106,11 +106,12 @@ const SignUpPage = () => {
           </button>
 
           <div className="auth-links">
-            <p>
-              Already have an account?{" "}
-              <a onClick={() => navigate("/")}>Sign In</a>
-            </p>
-          </div>
+  <p>
+    Already have an account?{" "}
+    <a href="#" onClick={() => navigate("/")}>Sign In</a>
+  </p>
+</div>
+
         </form>
       </div>
     </div>

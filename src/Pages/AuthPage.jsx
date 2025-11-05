@@ -126,12 +126,13 @@ const AuthPage = () => {
           </button>
 
           <div className="auth-links">
-            <a onClick={() => navigate("/forgot-password")}>Forgot Password?</a>
-            <p>
-              Don't have an account?{" "}
-              <a onClick={() => navigate("/signup")}>Sign Up</a>
-            </p>
-          </div>
+  <a href="#" onClick={() => navigate("/forgot-password")}>Forgot Password?</a>
+  <p>
+    Don't have an account?{" "}
+    <a href="#" onClick={() => navigate("/signup")}>Sign Up</a>
+  </p>
+</div>
+
         </form>
       </div>
     </div>
