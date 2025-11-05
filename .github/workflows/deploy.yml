@@ -1,7 +1,31 @@
-.yarnrc
-node_modules/
-src/
-public/
-.github/
-└── workflows/
-    └── deploy.yml
+name: CI/CD for React + Vercel
+
+on:
+  push:
+    branches:
+      - main   # change to 'master' if that's your branch name
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test -- --watchAll=false
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Vercel
+        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
