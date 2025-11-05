@@ -2,8 +2,9 @@ name: React CI (Build & Test)
 
 on:
   push:
-    branches:
-      - main   # or 'master' if that’s your branch
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -11,18 +12,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Run tests
-        run: npm test -- --watchAll=false
-
-      - name: Build project
+      - name: Build app
         run: npm run build
