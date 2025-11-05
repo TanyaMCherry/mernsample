@@ -107,10 +107,19 @@ const SignUpPage = () => {
 
           <div className="auth-links">
   <p>
-    Already have an account?{" "}
-    <a href="#" onClick={() => navigate("/")}>Sign In</a>
-  </p>
-</div>
+  Already have an account?{" "}
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      navigate("/");
+    }}
+  >
+    Sign In
+  </a>
+</p>
+
+</div>  
 
         </form>
       </div>

@@ -126,12 +126,29 @@ const AuthPage = () => {
           </button>
 
           <div className="auth-links">
-  <a href="#" onClick={() => navigate("/forgot-password")}>Forgot Password?</a>
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      navigate("/forgot-password");
+    }}
+  >
+    Forgot Password?
+  </a>
   <p>
     Don't have an account?{" "}
-    <a href="#" onClick={() => navigate("/signup")}>Sign Up</a>
+    <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        navigate("/signup");
+      }}
+    >
+      Sign Up
+    </a>
   </p>
 </div>
+
 
         </form>
       </div>

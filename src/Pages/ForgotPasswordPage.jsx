@@ -85,8 +85,17 @@ const ForgotPasswordPage = () => {
         </form>
 
         <p className="auth-links">
-  <a href="#" onClick={() => navigate("/")}>Back to Sign In</a>
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      navigate("/");
+    }}
+  >
+    Back to Sign In
+  </a>
 </p>
+
 
       </div>
     </div>
